@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello-recipie.component.scss']
 })
 export class HelloRecipieComponent {
-
+  data='rhythm'
+  addData(event:any){
+    this.data = event
+  }
+  onKeyDown(event:any){
+    console.log(event)
+  }
 }

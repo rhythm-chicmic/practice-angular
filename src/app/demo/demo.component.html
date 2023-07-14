@@ -1,1 +1,12 @@
 <p>demo works!</p>
+{{title}}
+<div *ngFor="let data of [1,2,3]" appHighlight>
+ <p appDisplayData>{{data}}</p>
+</div>
+
+
+
+<app-view-child [master]="'Rhythm'" (data)="onData($event)" (outputcalled)="onOutput($event)"></app-view-child>
+
+
+{{Outputcalled}}

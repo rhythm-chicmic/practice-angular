@@ -1,2 +1,7 @@
 <p>hello-recipie works!</p>
 <h2>an word </h2>
+
+<input type="text" [ngModel]="data" (ngModelChange)="addData($event)">
+
+<input (keydown.delete)="onKeyDown($event)">
+Here - {{data}}
