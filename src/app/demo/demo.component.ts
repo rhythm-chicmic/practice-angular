@@ -7,8 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DemoComponent implements AfterContentInit,AfterContentChecked, AfterViewInit,DoCheck,AfterViewChecked{
-  title:any
-  Outputcalled:number=0;
+  title:any;
+  Outputcalled=0;
   constructor(private activeRoute:ActivatedRoute,private ref: ChangeDetectorRef){
    this.title= this.activeRoute.data
   
@@ -27,7 +27,7 @@ ngAfterViewChecked(){
   onData(event:any){
     console.log(event)
   }
-  onOutput(event:any){
+  onOutput(){
     this.Outputcalled++;
   }
 ngDoCheck(){
@@ -38,6 +38,6 @@ ngDoCheck(){
   }
 
   ngAfterContentInit(){
-    console.log("called")
+    console.log("called")   
   }
 }

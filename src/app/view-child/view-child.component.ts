@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ViewChildComponent implements OnInit{
 @Output() data:any=new EventEmitter();
 @Output() outputcalled:any= new EventEmitter();
-@Input('master') masterName='';
+@Input() master='';
 constructor(){
   // this.data = 'ggg'
 }

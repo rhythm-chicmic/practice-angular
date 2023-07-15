@@ -10,11 +10,11 @@ export class DisplayDataDirective {
 
   @HostListener('mouseover')
   onHover(){
-    this.changeData(1)
+    this.changeData(2)
   }
 
   private changeData(increment:any){
-    this.el.nativeElement.innerText=parseInt( this.el.nativeElement.innerText)*2;
+    this.el.nativeElement.innerText=parseInt( this.el.nativeElement.innerText)*increment;
   }
 
 

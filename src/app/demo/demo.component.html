@@ -3,10 +3,15 @@
 <div *ngFor="let data of [1,2,3]" appHighlight>
  <p appDisplayData>{{data}}</p>
 </div>
+<ng-container *ngIf="false;else other">
+    <h1>Hool ffof</h1>
+</ng-container>
 
+<ng-template #other>
+   <h2>sdfs</h2>
+</ng-template>
 
-
-<app-view-child [master]="'Rhythm'" (data)="onData($event)" (outputcalled)="onOutput($event)"></app-view-child>
+<app-view-child [master]="'Rhythm'" (data)="onData($event)" (outputcalled)="onOutput()"></app-view-child>
 
 
 {{Outputcalled}}
